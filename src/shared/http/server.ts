@@ -2,6 +2,8 @@ import express, { NextFunction, Request, Response } from 'express';
 import cors from 'cors';
 import routes from './routes';
 import AppError from '@shared/errors/AppError';
+import 'reflect-metadata';
+import '@shared/typeorm';
 
 const app = express();
 
@@ -24,4 +26,4 @@ app.use(
     });
   },
 );
-app.listen(3333, () => console.log('Server listening on PORT 3333'));
+app.listen(3333, () => console.log('Server listening on PORT 3333!'));
